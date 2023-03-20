@@ -27,4 +27,5 @@ urlpatterns = [
          name="postauslista"),
     path('postaus/<int:id>',
          blogi_views.nayta_postaus,
-         name="nayta_postaus"),] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+         name="nayta_postaus"),
+         ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
