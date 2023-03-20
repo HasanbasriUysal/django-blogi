@@ -1,5 +1,4 @@
 """koodausblogi URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
@@ -22,13 +21,10 @@ from blogi import views as blogi_views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('django-hallinta/', admin.site.urls),
     path('',
          blogi_views.postaukset,
          name="postauslista"),
     path('postaus/<int:id>',
          blogi_views.nayta_postaus,
-         name="nayta_postaus"),
-    path('uusi/', blogi_views.uusi_postaus,
-         name="uusi_postaus"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+         name="nayta_postaus"),] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
